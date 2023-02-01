@@ -1,0 +1,40 @@
+<mvc:View controllerName="opensap.ordersf.controller.App"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <App id="app">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <Table id="table" 
+                            items="{path: '/Orders'}" mode="SingleSelectLeft">
+                            <headerToolbar>
+                            <OverflowToolbar>
+                                <content>
+                                <Title text="Orders" />
+                                <ToolbarSpacer/>
+                                <Button text="Nav to Customer" press="onNavToCustomer" />   
+                                </content>
+                            </OverflowToolbar>
+                            </headerToolbar>
+                            <columns>
+                            <Column>
+                                <Text text="Order ID"/>
+                            </Column>
+                            <Column>
+                                <Text text="Order Date"/>
+                            </Column>   
+                            <Column>
+                                <Text text="Customer ID"/>
+                            </Column>                        
+                            </columns>
+                            <items>
+                                <ColumnListItem>
+                                    <Text text="{OrderID}"/>
+                                    <Text text="{path: 'OrderDate', type: 'sap.ui.model.odata.type.DateTime'}"/>
+                                    <Text text="{CustomerID}"/>
+                                </ColumnListItem>    
+                            </items>  
+                        </Table>            
+        </content>
+    </Page>
+    </App>
+</mvc:View>

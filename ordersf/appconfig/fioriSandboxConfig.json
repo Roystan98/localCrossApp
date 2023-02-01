@@ -1,0 +1,15 @@
+{
+    "applications": {
+      "Orders2-display": {
+        "additionalInformation": "SAPUI5.Component=opensap.ordersf",
+        "applicationType": "URL",
+        "url": "../"
+      },
+      "Customers-display": {
+        "additionalInformation": "SAPUI5.Component=opensap.customersf",
+        "applicationType": "URL",
+        "url": "../resources/opensap.customersf"
+      }
+    }
+  }
+  
